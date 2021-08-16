@@ -9,7 +9,7 @@ env:
   BUILD_TYPE: Debug
 
 jobs:
-  build: windows
+  build-windows:
     runs-on: windows-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} 
 
-  build: linux
+  build-linux:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}    
 
-  build: mac
+  build-mac:
     runs-on: macos-latest
 
     steps:
