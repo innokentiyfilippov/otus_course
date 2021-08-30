@@ -2,5 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 
 project(otus_course CXX)
 
+if (DEFINED ENV{GITHUB_RUN_NUMBER})
+  add_definitions(-DGITHUB_RUN_NUMBER=$ENV{GITHUB_RUN_NUMBER})
+endif()
+
 add_executable(helloworld main.cpp)
 target_compile_features(helloworld PUBLIC cxx_std_17)
