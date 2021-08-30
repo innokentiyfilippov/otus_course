@@ -9,7 +9,7 @@ constexpr int version = -1;
 int main()
 {
     std::cout << "Bulid: " << version << std::endl;
-    std::cout << "Hello World!";
+    std::cout << "Hello World!\n";
     system("pause");
     return 0;
 }
