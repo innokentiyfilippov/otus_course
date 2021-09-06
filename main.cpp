@@ -18,8 +18,17 @@ void test_helloworld()
 
 void test_ipfilter()
 {
-    std::fstream in("ip_filter.tsv");
-    IpAddressContainer container = readFromFile(in);
+    //std::fstream in("ip_filter.tsv");
+    IpAddressContainer container;
+    try
+    {
+        container = readFromStream(std::cin);
+    }
+    catch(...)
+    {
+        std::cout << "Invalid data format";
+        return;
+    }
 
     // print all
     container.print(std::cout);

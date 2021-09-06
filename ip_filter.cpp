@@ -75,7 +75,7 @@ void IpAddressContainer::print(std::ostream& out, const IpAddressFilter* pFilter
     }
 }
 
-IpAddressContainer readFromFile(std::fstream& stream)
+IpAddressContainer readFromStream(std::istream& stream)
 {
     IpAddressContainer filter;
     std::string input, dummy;

@@ -89,4 +89,4 @@ private:
     std::multiset<IpAddress> m_addresses;
 };
 
-IpAddressContainer readFromFile(std::fstream& stream);
+IpAddressContainer readFromStream(std::istream& stream);
